@@ -39,7 +39,7 @@ ${RESET}${NEGRITO}"
 sleep 10
 sudo docker build -t meu-container .
 sleep 30
-sudo docker run -d -p 8080:8080 --name meu-container meu-container
+sudo docker run -d -p 8080:8080 --name ContainerApp meu-container
 
 
 
