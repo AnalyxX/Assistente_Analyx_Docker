@@ -1,5 +1,5 @@
 # Use uma imagem base com o JDK 8
-FROM openjdk:8-jdk-alpine
+FROM openjdk:17
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
