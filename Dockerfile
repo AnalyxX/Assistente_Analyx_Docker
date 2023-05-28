@@ -8,4 +8,4 @@ WORKDIR /app
 COPY ./analyx-source-gui-1.0-SNAPSHOT-jar-with-dependencies.jar /app
 
 # Especifique o comando a ser executado quando o contêiner for iniciado
-CMD ["java", "-jar", "analyx-source-gui-1.0-SNAPSHOT-jar-with-dependencies.jar.jar"]
+CMD ["java", "-jar", "analyx-source-gui-1.0-SNAPSHOT-jar-with-dependencies.jar"]
