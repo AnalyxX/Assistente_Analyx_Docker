@@ -24,7 +24,8 @@ sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker pull mysql:5.7
-sudo docker run -d -p 3306:3306 --name ContainerAnalyx -e "MYSQL_DATABASE=bd_analyx" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
+sudo docker network create minha-rede
+sudo docker run -d -p 3306:3306 --name ContainerAnalyx --network minha-rede -e "MYSQL_DATABASE=bd_analyx" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
 echo -e "${CIANO}${NEGRITO}[Assistente Analyx]${AMARELO}${NEGRITO}
 Concluindo configurações............
 ${RESET}${NEGRITO}"
@@ -39,7 +40,7 @@ ${RESET}${NEGRITO}"
 sleep 10
 sudo docker build -t meu-container .
 sleep 30
-sudo docker run -d -p 8080:8080 --name ContainerApp meu-container
+sudo docker run -d -p 8080:8080 --name ContainerApp --network minha-rede meu-container
 
 
 
